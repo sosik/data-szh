@@ -22,5 +22,8 @@
 	"nomination.json",
 	"commonTypes.json",
 	"commonEnums.json",
-	"requests.json"
+	"registrationRequests.json",
+	"dataChangeRequests.json",
+	"transferRequests.json",
+	"generalRequests.json"
 ]
