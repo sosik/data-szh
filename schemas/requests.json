@@ -139,7 +139,7 @@
 						"fields":{
 							"surName": "baseData.surName",
 							"name": "baseData.name",
-							"birthDate":"baseData.birthDate"
+							"registrationID":"baseData.registrationID"
 						}
 					},
 					"objectLinkForcedCriteria": [
