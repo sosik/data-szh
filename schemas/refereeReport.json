@@ -49,9 +49,9 @@
 					"type": "object",
 					"required": true,
 					"objectLink2": {
-						"schema":"uri://registries/organizations#views/club/view",
+						"schema":"uri://registries/rosters#views/rosters/view",
 						"fields":{
-							"name": "club.name"
+							"name": "baseData.prName"
 						}
 					}
 				},
@@ -61,9 +61,9 @@
 					"type": "object",
 					"required": true,
 					"objectLink2": {
-						"schema":"uri://registries/organizations#views/club/view",
+						"schema":"uri://registries/rosters#views/rosters/view",
 						"fields":{
-							"name": "club.name"
+							"name": "baseData.prName"
 						}
 					}
 				},
