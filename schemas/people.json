@@ -1204,10 +1204,84 @@
 			},
 			"view": {
 				"extends": "uri://registries/people#models/player-km",
-				"title": "Hráč"
+				"title": "Hráč",
+				"properties":{
+					"baseData": {
+						"properties": {
+							"registrationID": {
+								"readOnly": true
+							},
+							"name": {
+								"readOnly": true
+							},
+							"surName": {
+								"readOnly": true
+							},
+							"gender": {
+								"readOnly": true
+							},
+							"stateofPerson": {
+								"readOnly": true
+							},
+							"birthDate": null,
+							"id": null,
+							"titleBefore": null,
+							"stateofPerson": null,
+							"nationality": null
+						}
+					},
+					"player": {
+						"properties": {
+							"isPlayer":{
+								"readOnly": true
+							},
+							"clubOfFirstRegistration":{
+								"readOnly": true
+							},
+							"club":{
+								"readOnly": true
+							},
+							"stateOfPlayer":{
+								"readOnly": true
+							},
+							"registrationCanceled":{
+								"readOnly": true
+							},
+							"dateOfRegistration":{
+								"readOnly": true
+							},
+							"hostingStartDate":{
+								"readOnly": true
+							},
+							"hostingEndDate":{
+								"readOnly": true
+							},
+							"validFrom":{
+								"readOnly": true
+							},
+							"validTo":{
+								"readOnly": true
+							},
+							"expirationOfProffesionalContract": null,
+							"modifiedOn": null
+						}
+					},
+					"contactInfo": null,
+					"photoInfo": null,
+					"otherInfo": null
+				}
 			},
 			"search": {
 				"extends": "uri://registries/people#models/player-km",
+				"clientActions": [
+					{
+						"__DIRECTIVE__": "schema-redirect-link",
+						"title": "Zobraziť",
+						"params": {
+							"path": "/registry/view/uri~3A~2F~2Fregistries~2Fpeople~23views~2Fplayer-km/{{model.id}}"
+						}
+					}
+				],
 				"title": "Hráč",
 				"listFields": [
 					{
