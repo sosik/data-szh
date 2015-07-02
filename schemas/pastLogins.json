@@ -1,0 +1,109 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "uri://registries/pastLogins#",
+	"models": {
+		"pastLogin":{
+			"title": "Login history",
+			"transCode": "schema.pastLogins.title",
+			"table": "token",
+			"security": {
+				"create": {
+					"static": [
+						"BANNED"
+					]
+				},
+				"read": {
+					"static": [
+						"Login History"
+					]
+				},
+				"modify": {
+					"static": [
+						"BANNED"
+					]
+				}
+			},
+			"properties": {
+				"touched": {
+					"title": "Touched",
+					"type": "string",
+					"transCode": "schema.pastLogins.touched",
+					"readOnly": true,
+					"timestamp": true
+				},
+				"tokenId": {
+					"title": "Token ID",
+					"type": "string",
+					"transCode": "schema.pastLogins.tokenId",
+					"readOnly": true
+				},
+				"userId": {
+					"title": "User ID",
+					"type": "string",
+					"transCode": "schema.pastLogins.userId",
+					"readOnly": true
+				},
+				"user": {
+					"title": "User name",
+					"type": "string",
+					"transCode": "schema.pastLogins.userName",
+					"readOnly": true
+				},
+				"ip": {
+					"title": "IP Address",
+					"type": "string",
+					"transCode": "schema.pastLogins.ip",
+					"readOnly": true
+				},
+				"created": {
+					"title": "Token Created",
+					"type": "string",
+					"transCode": "schema.pastLogins.created",
+					"readOnly": true,
+					"timestamp": true
+				}
+			}
+		}
+	},
+	"views": {
+		"pastLogin":{
+			"view":{
+				"$ref": "uri://registries/pastLogins#models/pastLogin"
+			},
+			"search": {
+				"extends": "uri://registries/pastLogins#models/pastLogin",
+				"clientActions": [
+					{
+						"__DIRECTIVE__": "schema-redirect-link",
+						"title": "Zobraziť",
+						"params": {
+							"path": "/registry/view/uri~3A~2F~2Fregistries~2FpastLogins~23views~2FpastLogin/{{model.id}}"
+						}
+					}
+				],
+				"listFields": [
+					{
+						"field": "touched",
+						"title": "Touched",
+						"transCode": "schema.pastLogins.touched"
+					},
+					{
+						"field": "user",
+						"title": "User name",
+						"transCode": "schema.pastLogins.userName"
+					},
+					{
+						"field": "ip",
+						"title": "IP Address",
+						"transCode": "schema.pastLogins.ip"
+					},
+					{
+						"field": "created",
+						"title": "Token created",
+						"transCode": "schema.pastLogins.created"
+					}
+				]
+			}
+		}
+	}
+}

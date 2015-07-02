@@ -38,6 +38,11 @@
 				"type": "boolean",
 				"default": true
 			},
+			"Login History": {
+				"title": "Zobrazenie histórie prihlásení",
+				"type": "boolean",
+				"default": true
+			},
 
 
 			"RefereeReport - read - KM": {

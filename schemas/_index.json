@@ -25,5 +25,6 @@
 	"registrationRequests.json",
 	"dataChangeRequests.json",
 	"transferRequests.json",
-	"generalRequests.json"
+	"generalRequests.json",
+	"pastLogins.json"
 ]

@@ -95,6 +95,7 @@
 			<li><a href="#/security/user/edit"><span>{{'menu.user.permissions.lower.level' | translate}}</span></a></li>
 			<li ng-show="hasPermissions(['Registry - read'])"><a href="#/registry/new/{{'uri://registries/security#profilesmaster'|xpsuiuriescape}}"><span>{{'menu.new.profile.lower.level' | translate}}</span></a></li>
 			<li><a href="#/security/profile/edit"><span>{{'menu.profiles.lower.level' | translate}}</span></a></li>
+			<li ng-show="hasPermissions(['Login History'])"><a href="#/registry/search/{{'uri://registries/pastLogins#views/pastLogin/search'|xpsuiuriescape}}"><span>{{'menu.logins.lower.level' | translate}}</span></a></li>
 		</ul>
 	</li>
 	<li ng-show="hasPermissions(['Registry - read'])" ><a href="#" class="x-submenu-toggle"><i class="icon-bar-chart fa-2x"></i><span>{{'menu.statistics.title' | translate}}</span></a>

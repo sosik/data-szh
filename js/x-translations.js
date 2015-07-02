@@ -30,6 +30,7 @@
 		"menu.requests.search.change.lower.level":"Hľadať zmenu údajov",
 		"menu.requests.new.transfer.lower.level":"Žiadosť o transfer",
 		"menu.requests.search.transfer.lower.level":"Hľadať žiadosť o transfer",
+		"menu.logins.lower.level": "História prihlásení",
 
 
 		"schema.towns.town":"Mesto",
@@ -444,7 +445,15 @@
 		"schema.security.listFields.name":"Názov profilu",
 		"schema.security.baseData.name":"Názov profilu",
 		"schema.security.baseData":"Základné údaje",
-		"schema.securityMaster.title":"Bezpečnostný profil"
+		"schema.securityMaster.title":"Bezpečnostný profil",
+
+		"schema.pastLogins.title": "História prihlásení",
+		"schema.pastLogins.touched": "Dátum prihlásenia",
+		"schema.pastLogins.tokenId": "ID tokenu",
+		"schema.pastLogins.userId": "ID používateľa",
+		"schema.pastLogins.userName": "Prihlasovacie meno",
+		"schema.pastLogins.ip": "IP Adresa",
+		"schema.pastLogins.created": "Dátum vytvorenia tokenu"
 	});
 	
 	$translateProvider.translations('cz', {
@@ -483,6 +492,8 @@
 		"menu.requests.search.change.lower.level":"Hľadať zmenu údajov",
 		"menu.requests.new.transfer.lower.level":"Žiadosť o transfer",
 		"menu.requests.search.transfer.lower.level":"Hľadať žiadosť o transfer",
+		"menu.logins.lower.level": "Historie přihlášení",
+
 
 
 		"menu.new.person.lower.level": "Nová osoba",
@@ -867,6 +878,13 @@
 		"schema.registrationRequests.title":"Žádost o registraci",
 		"schema.dataChangeRequests.title":"Žádost o změnu údajů"
 
+		"schema.pastLogins.title": "Historie přihlášení",
+		"schema.pastLogins.touched": "Dátum přihlášení",
+		"schema.pastLogins.tokenId": "ID tokenu",
+		"schema.pastLogins.userId": "ID uživatele",
+		"schema.pastLogins.userName": "Přihlašovací jméno",
+		"schema.pastLogins.ip": "IP Adresa",
+		"schema.pastLogins.created": "Datum vytvoření tokenu"
 	});
 }]);
 }(angular));
