@@ -180,19 +180,19 @@
 	RequestChangedHandler.prototype.handle = function(event) {
 		log.info('handle called', event, RequestChangedHandler.prototype.ctx);
 
-		if (event.eventType === 'event-general-request-created' === event.eventType) {
+		if (event.eventType === 'event-general-request-created') {
 			this.handleRequestCreated(event, GEN_REQ_COLLECTION);
-		}else if(event.eventType === 'event-registration-request-created' === event.eventType) {
+		}else if(event.eventType === 'event-registration-request-created') {
 			this.handleRequestCreated(event, REG_REQ_COLLECTION);
-		}else if(event.eventType === 'event-data-request-created' === event.eventType) {
+		}else if(event.eventType === 'event-data-request-created') {
 			this.handleRequestCreated(event, DATA_REQ_COLLECTION);
-		}else if(event.eventType === 'event-transfer-request-created' === event.eventType) {
+		}else if(event.eventType === 'event-transfer-request-created') {
 			this.handleRequestCreated(event, TRANS_REQ_COLLECTION);
-		}else if (event.eventType === 'event-general-request-updated' === event.eventType) {
+		}else if (event.eventType === 'event-general-request-updated') {
 			this.handleRequestModified(event, GEN_REQ_COLLECTION);
-		}else if(event.eventType === 'event-registration-request-updated' === event.eventType) {
+		}else if(event.eventType === 'event-registration-request-updated') {
 			this.handleRequestModified(event, REG_REQ_COLLECTION);
-		}else if(event.eventType === 'event-data-request-updated' === event.eventType) {
+		}else if(event.eventType === 'event-data-request-updated') {
 			this.handleRequestModified(event, DATA_REQ_COLLECTION);
 		}else if(event.eventType === 'event-transfer-request-updated') {
 			this.handleRequestModified(event, TRANS_REQ_COLLECTION);
