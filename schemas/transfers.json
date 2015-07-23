@@ -192,27 +192,27 @@
 					{
 						"field": "baseData.typeOfTransfer",
 						"title": "Typ zmeny",
-						"transCode": "schema.transfer.typeOfTransfer"
+						"transCode": "schema.transfer.listFields.typeOfTransfer"
 					},
 					{
 						"field": "baseData.dateOfRealization",
 						"title": "Dátum realizácie",
-						"transCode": "schema.transfer.dateOfRealization"
+						"transCode": "schema.transfer.listFields.dateOfRealization"
 					},
 					{
 						"field": "baseData.player",
 						"title": "Meno",
-						"transCode": "schema.transfer.name"
+						"transCode": "schema.transfer.listFields.name"
 					},
 					{
 						"field": "baseData.clubFrom",
 						"title": "Z klubu",
-						"transCode": "schema.transfer.clubFrom"
+						"transCode": "schema.transfer.listFields.clubFrom"
 					},
 					{
 						"field": "baseData.clubTo",
 						"title": "Do klubu",
-						"transCode": "schema.transfer.clubTo"
+						"transCode": "schema.transfer.listFields.clubTo"
 					}
 				]
 			}

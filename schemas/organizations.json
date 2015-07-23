@@ -381,7 +381,7 @@
 		"club":{
 			"table": "organizations",
 			"title":"Klub",
-			"transCode":"schema.club.title",
+			"transCode":"schema.org.club.title",
 			"security": {
 				"create": {
 					"static": [
@@ -425,7 +425,7 @@
 		"club-km":{
 			"table": "organizations",
 			"title":"Klub",
-			"transCode":"schema.club.title",
+			"transCode":"schema.org.club.title",
 			"security": {
 				"create": {
 					"static": [
@@ -518,7 +518,7 @@
 		"association":{
 			"table": "organizations",
 			"title": "Zväzy",
-			"transCode":"schema.association.title",
+			"transCode":"schema.org.assoc.title",
 			"security": {
 				"create": {
 					"static": [

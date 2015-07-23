@@ -149,11 +149,13 @@
 				"listFields": [
 					{
 						"field":"baseData.name",
-						"title":"Názov športového objektu"
+						"title":"Názov športového objektu",
+						"transCode":"schema.stadium.listFields.name"
 					},
 					{
 						"field":"additionalData.overallCapacity",
-						"title":"Celková kapacita"
+						"title":"Celková kapacita",
+						"transCode":"schema.stadium.listFields.overallCapacity"
 					}
 				]
 			}

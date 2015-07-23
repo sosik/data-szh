@@ -1330,11 +1330,13 @@
 		"personalProfile": {
 			"new": {
 				"extends": "uri://registries/people#models/personalProfile",
-				"title": "Môj profil"
+				"title": "Môj profil",
+				"transCode":"schema.people.personalProfile"
 			},
 			"view": {
 				"extends": "uri://registries/people#models/personalProfile",
 				"title": "Môj profil",
+				"transCode":"schema.people.personalProfile",
 				"properties": {
 					"baseData": {
 						"properties": {
@@ -1380,6 +1382,7 @@
 			"search": {
 				"extends": "uri://registries/people#models/personalProfile",
 				"title": "Môj profil",
+				"transCode":"schema.people.personalProfile",
 				"listFields": [
 					{
 						"field": "baseData.surName",
