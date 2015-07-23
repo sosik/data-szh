@@ -876,7 +876,7 @@
 
 		"schema.generalRequests.title":"Všeobecná žádost",
 		"schema.registrationRequests.title":"Žádost o registraci",
-		"schema.dataChangeRequests.title":"Žádost o změnu údajů"
+		"schema.dataChangeRequests.title":"Žádost o změnu údajů",
 
 		"schema.pastLogins.title": "Historie přihlášení",
 		"schema.pastLogins.touched": "Dátum přihlášení",
