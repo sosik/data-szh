@@ -23,7 +23,7 @@
                 'eventType':causeEvent.eventType,'error':event.error,'eventJson':eventJson}});
 
             var mailOptions = {
-                from : 'websupport@unionsoft.sk',
+                from : this.ctx.config.mails.eventProcessingErrorSender,
                 to : this.ctx.config.mails.eventProcessingError,
                 subject :  subject,
                 html : resolvedBody
