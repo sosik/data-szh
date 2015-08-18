@@ -1,0 +1,72 @@
+@media print{
+	body{
+		margin: 0;
+		padding: 0;
+		width: 21cm;
+		min-height: 29.7cm;
+		font-size: 14px;
+	}
+}
+body{
+	-webkit-font-smoothing:antialiased;
+}
+/*flex design*/
+.row  {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+ 	flex-wrap: wrap;
+	-webkit-flex-direction: row;
+	-webkit-flex: 1 1 auto;	/* Three values: flex-grow | flex-shrink | flex-basis */
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+.col {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-webkit-flex: 1 1 auto;	/* Three values: flex-grow | flex-shrink | flex-basis */
+	border-right: 1px solid black;
+}
+.grow4{
+	flex-grow:12;
+}
+.grow2{
+	flex-grow:1.5;
+}
+
+.width100{
+	max-width: 100px;
+}
+.width20{
+	max-width: 20px;
+}
+
+/*borders*/
+.noborder{
+	border: none;
+}
+.topB{
+	border-top: 1px solid black;
+}
+.leftB{
+	border-left: 1px solid black;
+}
+
+/*others*/
+.bgYellow{
+	background: #fefb4e;
+}
+.home{
+	background: #209aef;
+}
+
+.away{
+	background: #70da5b;
+}

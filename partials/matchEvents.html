@@ -1,0 +1,340 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			.editor {
+				display: flex;
+				flex-direction: row;
+			}
+
+			.buttons-container {
+				width: 66%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.events-container {
+				width: 33%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.p-buttons-container {
+				display: flex;
+				flex-direction: row;
+				flex: 0 0 auto;
+			}
+
+			.time-panel {
+				text-align: center;
+				background-color: #18142B;
+				margin: 5px;
+				padding: 5px;
+				border-radius: 5px;
+			}
+			
+			.new-events {
+				display: flex;
+				flex-direction: row;
+				background-color: #18142B;
+				margin: 5px;
+				padding: 5px;
+				border-radius: 5px;
+			}
+
+			.event {
+				display: flex;
+				flex-direction: row;
+				background-color: white;
+				padding: 5px;
+				border-radius: 5px;
+			}
+
+			.e-button {
+				flex: 0 0 auto;
+				background: #60626C;
+				border: 2px black solid;
+				border-radius: 5px;
+				margin: 5px;
+				height: 50px;
+				width: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: monospace;
+				font-weight: bold;
+				color: black;
+				cursor: pointer;
+			}
+
+			.e-button:HOVER {
+				background-color: #FBAD17;
+			}
+			
+			.event .e-button {
+				height: 30px;
+				width: 30px;
+					font-size: 12px;
+			}
+
+			.e-input {
+				display: flex;
+				flex: 1 0 auto;
+				width: 40px;
+				padding: 5px;
+			}
+
+			.event .e-input INPUT {
+				border: 0;
+			}
+
+			.e-input INPUT {
+				width: 100%;
+				text-align: center;
+				font-size: 26px;
+			}
+
+			.time {
+				font-size: 32px;
+				font-weight: bold;
+				color: white;
+			}
+
+			.t-buttons-container {
+				display: flex;
+				flex-direction: row;
+				flex: 0 0 auto;
+			}
+
+			.t-button {
+				flex: 1 0 auto;
+				background: #FBAD17;
+				border: 2px black solid;
+				border-radius: 5px;
+				margin: 5px;
+				height: 50px;
+				width: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: monospace;
+				font-weight: bold;
+				color: black;
+				cursor: pointer;
+			}
+			
+			.t-button:HOVER {
+				background: #60626C;
+			}
+
+			.time INPUT {
+				height: 50px;
+				text-align: center;
+				background-color: #18142B;
+				color: white; 
+				border: 0;
+				font-size: 32px;
+				width: 30%;
+				font-weight: bold;
+			}
+
+			.p-button {
+				flex: 1 0 auto;
+				background: #FBAD17;
+				border: 2px black solid;
+				border-radius: 5px;
+				margin: 5px;
+				height: 50px;
+				width: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: monospace;
+				font-weight: bold;
+				color: black;
+				cursor: pointer;
+			}
+
+			.p-button:HOVER {
+				background-color: #18142B;
+				color: white;
+
+			}
+
+			.a-button {
+				flex: 1 0 auto;
+				background: #60626C;
+				border: 2px black solid;
+				border-radius: 5px;
+				margin: 5px;
+				height: 50px;
+				width: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-family: monospace;
+				font-weight: bold;
+				color: white;
+			}
+
+			.players-container {
+				display: flex;
+				flex-direction: row;
+				padding-right: 10px;
+			}
+
+			.players {
+				flex: 1 0 50%;
+				display: flex;
+				flex-direction: column;
+				margin: 2px;
+			}
+
+			.player {
+				display: flex;
+				font-size: 16px;
+				border: 1px silver solid;
+			}
+			.player DIV {
+				margin: 2px;
+			}
+
+			.pname {
+				flex: 0 0 auto;
+				width: 100px;
+				padding: 2px;
+			}
+			.pjersey {
+				flex: 0 0 auto;
+				width: 25px;
+				padding: 2px;
+				text-align: right;
+			}
+			.prp {
+				flex: 0 0 auto;
+				width: 45px;
+				padding: 2px;
+				text-align: right;
+			}
+			.pevents {
+				flex: 1 0 auto;
+				width: 45px;
+				padding: 2px;
+				text-align: right;
+			}
+			.ppoints {
+				flex: 0 0 auto;
+				width: 35px;
+				padding: 2px;
+				text-align: right;
+			}
+			.ppunish {
+				flex: 0 0 auto;
+				width: 65px;
+				padding: 2px;
+				text-align: right;
+			}
+
+		</style>
+		<link rel="stylesheet" href="/lib/components-font-awesome/css/font-awesome.min.css">
+		<script src="/lib/angular/angular.js"></script>
+		<script src="matchEvents.js"></script>
+	</head>
+	<body ng-app="match-events">
+		<div ng-controller="match-events-editor as editor" class="editor">
+			<div class="buttons-container">
+				<div class="p-buttons-container">
+					<div ng-repeat="player in editor.match.playersHome|limitTo:8" class="p-button" ng-click="editor.setPlayerH($index)">
+						<div>{{player.jersey}}</div>
+					</div>
+				</div>
+				<div class="p-buttons-container">
+					<div ng-repeat="player in editor.match.playersHome|limitTo:-8" class="p-button" ng-click="editor.setPlayerH($index+8)">
+						<div>{{player.jersey}}</div>
+					</div>
+				</div>
+				<div class="p-buttons-container">
+						<div class="a-button" ng-click="editor.setE('G');">G</div>
+						<div class="a-button" ng-click="editor.setE('N');">N</div>
+						<div class="a-button" ng-click="editor.setE('2');">2</div>
+						<div class="a-button" ng-click="editor.setE('D');">D</div>
+						<div class="a-button" ng-click="editor.setE('7');">7</div>
+						<div class="a-button" ng-click="editor.setE('0');">&#x277C;</div>
+				</div>
+				<div class="p-buttons-container">
+					<div ng-repeat="player in editor.match.playersAway|limitTo:8" class="p-button" ng-click="editor.setPlayerA($index)">
+						<div>{{player.jersey}}</div>
+					</div>
+				</div>
+				<div class="p-buttons-container">
+					<div ng-repeat="player in editor.match.playersAway|limitTo:-8" class="p-button" ng-click="editor.setPlayerA($index+8)">
+						<div>{{player.jersey}}</div>
+					</div>
+				</div>
+				<div class="players-container">
+					<div class="players">
+						<div class="player" ng-repeat="player in editor.match.playersHome">
+							<div class="pjersey">{{player.jersey}}</div>
+							<div class="pname">{{player.name}}</div>
+							<div class="prp">{{player.rp}}</div>
+							<div class="pevents">{{player.events}}</div>
+							<div class="ppoints">{{player.points}}</div>
+							<div class="ppunish">{{player.punishments}}</div>
+						</div>
+					</div>
+					<div class="players">
+						<div class="player" ng-repeat="player in editor.match.playersAway">
+							<div class="pjersey">{{player.jersey}}</div>
+							<div class="pname">{{player.name}}</div>
+							<div class="prp">{{player.rp}}</div>
+							<div class="pevents">{{player.events}}</div>
+							<div class="ppoints">{{player.points}}</div>
+							<div class="ppunish">{{player.punishments}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="events-container">
+				<div class="time-panel">
+					<div class="time"><input ng-model="editor.time.minute"></input>:<input ng-model="editor.time.second"></input></div>
+					<div class="t-buttons-container">
+						<div class="t-button" ng-click="editor.adjustTime(-60);"><i class="fa fa-fast-backward"></i></div>
+						<div class="t-button" ng-click="editor.adjustTime(-5);"><i class="fa fa-step-backward"></i></div>
+						<div class="t-button" ng-click="editor.pauseTime();"><i class="fa fa-pause"></i></div>
+						<div class="t-button" ng-click="editor.startTime();"><i class="fa fa-play"></i></div>
+						<div class="t-button" ng-click="editor.adjustTime(5);"><i class="fa fa-step-forward"></i></div>
+						<div class="t-button" ng-click="editor.adjustTime(60);"><i class="fa fa-fast-forward"></i></div>
+					</div>
+					<div class="t-buttons-container">
+						<div class="t-button" ng-click="editor.setTime(0);"><i class="fa fa-star-half"></i></div>
+						<div class="t-button" ng-click="editor.setTime(30*60);"><i class="fa fa-star"></i></div>
+						<div class="t-button" ng-click="editor.setTime(60*60);"><i class="fa fa-star-half-o"></i></div>
+						<div class="t-button" ng-click="editor.setTime(75*60);"><i class="fa fa-star-o"></i></div>
+					</div>
+				</div>
+				<div class="events-panel">
+					<div class="new-events">
+						<div style="width:40px;"></div>
+						<div class="e-input"><input  id="firstInput" ng-model="editor.nEvent.time"></input></div>
+						<div class="e-input"><input ng-model="editor.nEvent.ph"></input></div>
+						<div class="e-input"><input ng-model="editor.nEvent.pa"></input></div>
+						<div class="e-input"><input ng-model="editor.nEvent.e"></input></div>
+						<div class="e-button" tabindex="0" ng-click="editor.applyE();" ng-keydown="editor.applyE();"><i class="fa fa-check"></i></div>
+					</div>
+					<div class="event" ng-repeat="evt in editor.events">
+						<div class="e-button" ng-click="editor.insertE($index);"><i class="fa fa-plus"></i></div>
+						<div class="e-input"><input ng-model="evt.time"></input></div>
+						<div class="e-input"><input ng-model="evt.ph"></input></div>
+						<div class="e-input"><input ng-model="evt.pa"></input></div>
+						<div class="e-input"><input ng-model="evt.e"></input></div>
+						<div class="e-button" ng-click="editor.removeE($index);"><i class="fa fa-minus"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
